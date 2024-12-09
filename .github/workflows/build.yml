@@ -24,7 +24,7 @@ jobs:
       with:
         name: build-artifacts
         path: |
-          bin\EmissaoMicroservice
+          emissaomicroservice\bin\EmissaoMicroservice
   
   deploy:
     name: Deploy to EC2
@@ -50,7 +50,7 @@ jobs:
     - name: Deploy da API Emissao
       uses: nogsantos/scp-deploy@master
       with:
-        src: ./artifacts/bin/EmissaoMicroservice
+        src: ./artifacts/emissaomicroservice/bin/EmissaoMicroservice
         host: ${{ secrets.SSH_HOST }}
         remote: ${{ secrets.SSH_DIR }}
         port: ${{ secrets.SSH_PORT }}
