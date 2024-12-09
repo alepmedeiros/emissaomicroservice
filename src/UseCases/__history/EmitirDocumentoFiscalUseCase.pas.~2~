@@ -1,0 +1,17 @@
+unit EmitirDocumentoFiscalUseCase;
+
+interface
+
+uses
+  DocumentoFiscal;
+
+type
+  TEmitirDocumentoFiscalUseCase = class
+  private
+  public
+    function Execute(Documento: TDocumentoFiscal): Boolean;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/12/06 10:19:06.000.474,C:\repositorio\EmissaoMicroservice.dproj=C:\repositorio\Project1.dproj</Transaction>
+    <Transaction>2024/12/06 10:19:59.000.642,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\EmissaoMicroservice.dproj=C:\repositorio\EmissaoMicroservice.dproj</Transaction>
+    <Transaction>2024/12/06 10:22:19.000.505,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 10:22:29.000.404,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\main.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 10:27:00.000.732,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 10:27:08.000.435,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\main.pas</Transaction>
+    <Transaction>2024/12/06 10:29:34.000.721,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\UseCases\EmitirDocumentoFiscalUseCase.pas</Transaction>
+    <Transaction>2024/12/06 10:29:57.000.678,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Entities\DocumentoFiscalDTO.pas</Transaction>
+    <Transaction>2024/12/06 10:29:57.000.664,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Entities\DocumentoFiscal.pas</Transaction>
+    <Transaction>2024/12/06 10:30:20.000.821,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Repositories\MockDocumentoFiscalREpository.pas</Transaction>
+    <Transaction>2024/12/06 10:30:20.000.802,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Repositories\DocumentoFiscalREpository.interfaces.pas</Transaction>
+    <Transaction>2024/12/06 11:35:34.000.252,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:36:14.000.952,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventDispatcher.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:36:27.000.131,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:37:07.000.182,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventHandlers\DocumentoEmitidoHandler.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:37:11.000.399,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:37:28.000.937,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventHandlers\AuthEventHandler.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 11:37:45.000.514,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventDispatcher.pas=</Transaction>
+    <Transaction>2024/12/06 11:37:49.000.574,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventHandlers\AuthEventHandler.pas=</Transaction>
+    <Transaction>2024/12/06 11:37:49.000.585,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Events\EventHandlers\DocumentoEmitidoHandler.pas=</Transaction>
+    <Transaction>2024/12/06 11:39:12.000.669,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\Events\EventDispatcher.pas</Transaction>
+    <Transaction>2024/12/06 13:16:22.000.697,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\Events\EventHandlers\DocumentoEmitidoHandler.pas</Transaction>
+    <Transaction>2024/12/06 13:18:17.000.851,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\Events\EventHandlers\AuthEventHandler.pas</Transaction>
+    <Transaction>2024/12/06 13:20:00.000.508,=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas</Transaction>
+    <Transaction>2024/12/06 13:20:13.000.122,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\Unit1.pas=C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\EmissaoMicroservice\src\Controllers\EmissaoController.pas</Transaction>
+    <Transaction>2024/12/06 13:29:04.000.499,C:\repositorio\live-formacao-fiscal\aulas da formação\Módulo3\Microservices\Events\EventHandlers\AuthEventHandler.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

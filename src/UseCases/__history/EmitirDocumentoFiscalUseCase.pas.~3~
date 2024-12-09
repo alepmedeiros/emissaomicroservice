@@ -1,0 +1,25 @@
+unit EmitirDocumentoFiscalUseCase;
+
+interface
+
+uses
+  DocumentoFiscal;
+
+type
+  TEmitirDocumentoFiscalUseCase = class
+  private
+  public
+    function Execute(Documento: TDocumentoFiscal): Boolean;
+  end;
+
+implementation
+
+{ TEmitirDocumentoFiscalUseCase }
+
+function TEmitirDocumentoFiscalUseCase.Execute(
+  Documento: TDocumentoFiscal): Boolean;
+begin
+  Result := Documento.PodeEmitir;
+end;
+
+end.

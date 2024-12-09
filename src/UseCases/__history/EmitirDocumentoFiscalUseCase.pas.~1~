@@ -1,0 +1,10 @@
+unit EmitirDocumentoFiscalUseCase;
+
+interface
+
+type
+  TEmitirDocumentoFiscalUseCase
+
+implementation
+
+end.
