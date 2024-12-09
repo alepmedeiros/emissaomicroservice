@@ -50,7 +50,7 @@ jobs:
     - name: Deploy da API Emissao
       uses: nogsantos/scp-deploy@master
       with:
-        src: ./artifacts/emissaomicroservice/bin/EmissaoMicroservice
+        src: ./artifacts/*
         host: ${{ secrets.SSH_HOST }}
         remote: ${{ secrets.SSH_DIR }}
         port: ${{ secrets.SSH_PORT }}
