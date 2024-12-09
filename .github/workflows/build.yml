@@ -25,3 +25,18 @@ jobs:
         name: build-artifacts
         path: |
           bin\EmissaoMicroservice
+  
+  deploy:
+    name: Deploy to EC2
+    runs-on: ubuntu-latest
+
+    needs: build
+    steps:
+    - name: Parando seriço
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: sudo systemctl stop emissao.service
