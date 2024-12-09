@@ -40,3 +40,28 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: sudo systemctl stop emissao.service
+
+    - name: Download Build
+      uses: actions/download-artifact@v4.1.8
+      with:
+        name: build-artifacts
+        path: ./artifacts
+
+    - name: Deploy da API Emissao
+      uses: nogsantos/scp-deploy@master
+      with:
+        src: ./artifacts/bin/EmissaoMicroservice
+        host: ${{ secrets.SSH_HOST }}
+        remote: ${{ secrets.SSH_DIR }}
+        port: ${{ secrets.SSH_PORT }}
+        user: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+
+    - name: Inicando serviço
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: sudo systemctl start emissao.service
