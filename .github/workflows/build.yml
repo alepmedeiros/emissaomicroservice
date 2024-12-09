@@ -25,4 +25,3 @@ jobs:
         name: build-artifacts
         path: |
           bin\EmissaoMicroservice
-          bin\AuthMicroservice
