@@ -12,10 +12,7 @@ uses
   DocumentoFiscalREpository.interfaces in 'src\Repositories\DocumentoFiscalREpository.interfaces.pas',
   MockDocumentoFiscalREpository in 'src\Repositories\MockDocumentoFiscalREpository.pas',
   EmitirDocumentoFiscalUseCase in 'src\UseCases\EmitirDocumentoFiscalUseCase.pas',
-  EmissaoController in 'src\Controllers\EmissaoController.pas',
-  EventDispatcher in 'src\Events\EventDispatcher.pas',
-  AuthEventHandler in 'src\Events\EventHandlers\AuthEventHandler.pas',
-  DocumentoEmitidoHandler in 'src\Events\EventHandlers\DocumentoEmitidoHandler.pas';
+  EmissaoController in 'src\Controllers\EmissaoController.pas';
 
 begin
   {$IFDEF DEBUG}

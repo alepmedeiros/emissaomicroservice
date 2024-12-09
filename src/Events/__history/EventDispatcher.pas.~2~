@@ -1,0 +1,11 @@
+unit EventDispatcher;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Generics.Collections;
+
+implementation
+
+end.

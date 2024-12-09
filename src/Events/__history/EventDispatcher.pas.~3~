@@ -1,0 +1,14 @@
+unit EventDispatcher;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Generics.Collections;
+
+type
+  TEventCallback = reference to procedure(Data: TObject);
+
+implementation
+
+end.

@@ -1,0 +1,7 @@
+unit EventDispatcher;
+
+interface
+
+implementation
+
+end.
