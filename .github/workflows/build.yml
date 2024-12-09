@@ -24,7 +24,7 @@ jobs:
       with:
         name: build-artifacts
         path: |
-          emissaomicroservice\bin\EmissaoMicroservice
+          bin\EmissaoMicroservice
   
   deploy:
     name: Deploy to EC2
