@@ -3,18 +3,26 @@ unit EmissaoController;
 interface
 
 uses
+  System.SysUtils,
   Horse,
   System.JSON,
+  IdHTTP,
   EventDispatcher,
   DocumentoEmitidoHandler,
-  DocumentoFiscalDTO;
+  DocumentoFiscalDTO,
+  EmitirDocumentoFiscalUseCase,
+  MockDocumentoFiscalREpository,
+  DocumentoFiscal;
 
 type
   TEmissaoController = class
   private
     FDispatcher: TEventDispatcher;
   protected
+    function CheckAuthentication(Token: String): Boolean;
+
     procedure EmitirDocumento(Req: THorseRequest; Res: THorseResponse);
+    procedure TesteActions(Req: THorseRequest; Res: THorseResponse);
   public
     class function New: TEmissaoController;
 
@@ -25,17 +33,42 @@ implementation
 
 { TEmissaoController }
 
+function TEmissaoController.CheckAuthentication(Token: String): Boolean;
+begin
+  var LHTTP := TIdHTTP.Create(nil);
+  try
+    LHTTP.Request.CustomHeaders.Values['Authorization'] := 'Bearer ' + Token;
+    var LResponse := LHTTP.Get('http://localhost:9002/checktoken');
+    Result := LResponse = 'Valid';
+  finally
+    LHTTP.Free;
+  end;
+end;
+
 procedure TEmissaoController.EmitirDocumento(Req: THorseRequest;
   Res: THorseResponse);
 begin
-  var LDocumento := TDocumentoFiscalDTO.Create;
-  try
-    LDocumento.Numero := Req.Body<TJSONObject>.GetValue<String>('numero');
-    LDocumento.ValorTotal := Req.Body<TJSONObject>.GetValue<Double>('valorTotal');
+  if not CheckAuthentication(Req.Headers['Authorization']) then
+  begin
+    REs.Status(401).Send('Token Inválido');
+    Exit;
+  end;
 
-    // Despachar evento de documento emitido
-    FDispatcher.Dispatch('DocumentoEmitido', LDocumento);
-    Res.Status(200).Send('Documento emitido e evento disparado');
+  var LDocumento := TDocumentoFiscal.Create(
+    Req.Body<TJSONObject>.GetValue<String>('numero'),
+    Req.Body<TJSONObject>.GetValue<Double>('valorTotal'));
+
+  var LRepository := TMockDocumentoFiscalRespository.Create;
+
+  var LUseCase := TEmitirDocumentoFiscalUseCase.Create(LRepository);
+  try
+    if not LUseCase.Execute(LDocumento) then
+    begin
+      Res.Status(400).Send('Falha ao emitir o documento');
+      exit;
+    end;
+
+    Res.Status(200).Send('Documento emitido com sucesso');
   finally
     LDocumento.Free;
   end;
@@ -54,7 +87,14 @@ begin
   FDispatcher.Subscribe('DocumentoEmitido', LDocumentoHandler.Handle);
 
   THorse
-    .Post('/emitir', EmitirDocumento);
+    .Post('/emitir', EmitirDocumento)
+    .Get('/action', TesteActions);
+end;
+
+procedure TEmissaoController.TesteActions(Req: THorseRequest;
+  Res: THorseResponse);
+begin
+  Res.Status(200).Send('Teste da action funcionando');
 end;
 
 end.
